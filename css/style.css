@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f1115;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+}
+
+.logo {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #00aaff;
+}
+
+.slogan {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #bbbbbb;
+}
+
+.construction {
+  margin-top: 40px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffffcc;
+}
+
+/* Barra de progresso */
+.progress-bar {
+  margin: 30px auto;
+  width: 80%;
+  height: 10px;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #00aaff, #005577);
+  animation: loadProgress 4s infinite alternate;
+  border-radius: 10px;
+}
+
+@keyframes loadProgress {
+  0% { width: 10%; }
+  100% { width: 90%; }
+}
+
+/* Seção do botão do jogo */
+.game-access {
+  margin: 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 170, 255, 0.2);
+  border: 2px solid #00aaff;
+}
+
+.game-text {
+  font-size: 1.2rem;
+  color: #bbbbbb;
+  margin-bottom: 15px;
+}
+
+.games-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.game-access-btn {
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #00aaff, #005577);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 200px;
+}
+
+.game-access-btn:hover {
+  background: linear-gradient(135deg, #0099ee, #004466);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.4);
+}
+
+.game-access-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 170, 255, 0.3);
+}
+
+/* Ícones com animação */
+.icons {
+  margin-top: 30px;
+  font-size: 2.5rem;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #00aaff;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Newsletter */
+.newsletter {
+  margin-top: 40px;
+}
+
+.newsletter p {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 10px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #00aaff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: #008fcc;
+}
+
+/* Rodapé */
+.footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 2rem;
+  }
+  
+  .construction {
+    font-size: 1.3rem;
+  }
+  
+  .games-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .game-access-btn {
+    font-size: 1rem;
+    padding: 12px 20px;
+    min-width: 180px;
+  }
+  
+  .icons {
+    font-size: 2rem;
+    gap: 20px;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+  }
+}

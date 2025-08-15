@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Retrô - ATF Soluções</title>
+  <link rel="stylesheet" href="/css/snake-style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">ATF SOLUÇÕES</div>
+      <div class="game-title">🐍 SNAKE RETRÔ 🐍</div>
+      <button id="backBtn" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Voltar ao Site
+      </button>
+    </div>
+
+    <!-- Game Section -->
+    <div class="game-section">
+      <div class="game-info">
+        <div class="score">SCORE: <span id="currentScore">0</span></div>
+        <div class="high-score">RECORDE: <span id="highScore">0</span></div>
+      </div>
+      
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+      
+      <div class="game-controls">
+        <button id="startBtn" class="game-btn btn-start">INICIAR</button>
+        <button id="pauseBtn" class="game-btn btn-pause" disabled>PAUSAR</button>
+        <button id="resetBtn" class="game-btn btn-reset">RESETAR</button>
+      </div>
+      
+      <div class="game-instructions">
+        <p><strong>Controles:</strong></p>
+        <p>🖥️ <strong>Desktop:</strong> Use as setas do teclado ou WASD</p>
+        <p>📱 <strong>Mobile:</strong> Toque nas setas abaixo</p>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="mobile-controls">
+        <div class="mobile-row">
+          <button class="mobile-btn" data-direction="up">
+            <i class="fas fa-chevron-up"></i>
+          </button>
+        </div>
+        <div class="mobile-row">
+          <button class="mobile-btn" data-direction="left">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="mobile-btn" data-direction="down">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <button class="mobile-btn" data-direction="right">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/snake-game.js"></script>
+  <script>
+    document.getElementById('backBtn').addEventListener('click', function() {
+      window.close();
+      // Caso window.close() não funcione (alguns navegadores bloqueiam)
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 100);
+    });
+  </script>
+</body>
+</html>

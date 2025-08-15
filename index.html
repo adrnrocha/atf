@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATF SOLUÇÕES - Em Construção</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="container">
+    <div class="logo">ATF SOLUÇÕES</div>
+    <div class="slogan">Sua solução é nossa missão</div>
+
+    <div class="construction">
+      Estamos trabalhando para oferecer soluções tecnológicas incríveis!
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+
+    <!-- Botões para acessar os jogos -->
+    <div class="game-access">
+      <p class="game-text">Enquanto isso, que tal se divertir?</p>
+      <div class="games-buttons">
+        <button id="snakeBtn" class="game-access-btn">
+          🐍 SNAKE RETRÔ 🐍
+        </button>
+        <button id="tetrisBtn" class="game-access-btn">
+          🧩 TETRIS RETRÔ 🧩
+        </button>
+      </div>
+    </div>
+
+    <div class="icons">
+      <i class="fas fa-code" title="Desenvolvimento Web"></i>
+      <i class="fas fa-robot" title="Automação & Bots com IA"></i>
+      <i class="fas fa-laptop-code" title="UI/UX & Design Responsivo"></i>
+      <i class="fas fa-network-wired" title="Infraestrutura & Integrações"></i>
+      <i class="fas fa-cart-plus" title="Lojas Virtuais e E-commerce"></i>
+    </div>
+
+    <div class="newsletter">
+      <p>Quer ser avisado quando lançarmos?</p>
+      <form action="form-handler.php" method="POST">
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        
+        <!-- Honeypot: Campo oculto -->
+        <input type="text" name="honeypot" style="display:none;">
+
+        <button type="submit">Notificar-me</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      © 2025 ATF Soluções. Todos os direitos reservados.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('snakeBtn').addEventListener('click', function() {
+      window.open('page/snake-game.html', '_blank');
+    });
+    
+    document.getElementById('tetrisBtn').addEventListener('click', function() {
+      window.open('page/tetris-game.html', '_blank');
+    });
+  </script>
+</body>
+</html>

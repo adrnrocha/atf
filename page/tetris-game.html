@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris Retrô - ATF Soluções</title>
+  <link rel="stylesheet" href="/css/tetris-style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">ATF SOLUÇÕES</div>
+      <div class="game-title">🧩 TETRIS RETRÔ 🧩</div>
+      <button id="backBtn" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Voltar ao Site
+      </button>
+    </div>
+
+    <!-- Game Section -->
+    <div class="game-section">
+      <div class="game-container">
+        <!-- Left Panel - Stats -->
+        <div class="left-panel">
+          <div class="stats-panel">
+            <h3>ESTATÍSTICAS</h3>
+            <div class="stat-item">
+              <span>SCORE:</span>
+              <span id="score">0</span>
+            </div>
+            <div class="stat-item">
+              <span>LINHAS:</span>
+              <span id="lines">0</span>
+            </div>
+            <div class="stat-item">
+              <span>NÍVEL:</span>
+              <span id="level">1</span>
+            </div>
+            <div class="stat-item">
+              <span>RECORDE:</span>
+              <span id="highScore">0</span>
+            </div>
+          </div>
+
+          <div class="next-panel">
+            <h3>PRÓXIMA PEÇA</h3>
+            <canvas id="nextCanvas" width="120" height="120"></canvas>
+          </div>
+        </div>
+
+        <!-- Center - Game Board -->
+        <div class="center-panel">
+          <canvas id="gameCanvas" width="300" height="600"></canvas>
+          
+          <div class="game-controls">
+            <button id="startBtn" class="game-btn btn-start">INICIAR</button>
+            <button id="pauseBtn" class="game-btn btn-pause" disabled>PAUSAR</button>
+            <button id="resetBtn" class="game-btn btn-reset">RESETAR</button>
+          </div>
+        </div>
+
+        <!-- Right Panel - Instructions -->
+        <div class="right-panel">
+          <div class="instructions-panel">
+            <h3>CONTROLES</h3>
+            <div class="control-item">
+              <span>🖥️ <strong>Desktop:</strong></span>
+              <div class="key-binds">
+                <span>↑ - Rotacionar</span>
+                <span>↓ - Acelerar</span>
+                <span>← → - Mover</span>
+                <span>ESPAÇO - Drop</span>
+                <span>P - Pausar</span>
+              </div>
+            </div>
+            
+            <div class="control-item mobile-only">
+              <span>📱 <strong>Mobile:</strong></span>
+              <span>Use os botões abaixo</span>
+            </div>
+          </div>
+
+          <div class="scoring-panel">
+            <h3>PONTUAÇÃO</h3>
+            <div class="score-item">1 Linha: 100pts</div>
+            <div class="score-item">2 Linhas: 300pts</div>
+            <div class="score-item">3 Linhas: 500pts</div>
+            <div class="score-item">4 Linhas: 800pts</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="mobile-controls">
+        <div class="mobile-row">
+          <button class="mobile-btn" id="rotateBtn">
+            <i class="fas fa-redo"></i>
+          </button>
+          <button class="mobile-btn" id="dropBtn">
+            <i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+        <div class="mobile-row">
+          <button class="mobile-btn" id="leftBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="mobile-btn" id="downBtn">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <button class="mobile-btn" id="rightBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/tetris-game.js"></script>
+  <script>
+    document.getElementById('backBtn').addEventListener('click', function() {
+      window.close();
+      // Caso window.close() não funcione (alguns navegadores bloqueiam)
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 100);
+    });
+  </script>
+</body>
+</html>
