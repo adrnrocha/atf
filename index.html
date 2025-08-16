@@ -33,6 +33,12 @@
         <button id="tetrisBtn" class="game-access-btn">
           🧩 TETRIS RETRÔ 🧩
         </button>
+        <button id="minesweeperBtn" class="game-access-btn">
+          💣 CAMPO MINADO RETRÔ 💣
+        </button>
+        <button id="spaceshipBtn" class="game-access-btn">
+          🚀 NAVE ESPACIAL RETRÔ 🚀
+        </button>
       </div>
     </div>
 
@@ -46,7 +52,7 @@
 
     <div class="newsletter">
       <p>Quer ser avisado quando lançarmos?</p>
-      <form action="form-handler.php" method="POST">
+      <form action="/php/form-handler.php" method="POST">
         <input type="email" name="email" placeholder="Seu e-mail" required />
         
         <!-- Honeypot: Campo oculto -->
@@ -68,6 +74,14 @@
     
     document.getElementById('tetrisBtn').addEventListener('click', function() {
       window.open('page/tetris-game.html', '_blank');
+    });
+    
+    document.getElementById('minesweeperBtn').addEventListener('click', function() {
+      window.open('page/minesweeper-game.html', '_blank');
+    });
+    
+    document.getElementById('spaceshipBtn').addEventListener('click', function() {
+      window.open('page/spaceship-game.html', '_blank');
     });
   </script>
 </body>

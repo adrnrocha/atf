@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campo Minado - ATF SOLUÇÕES</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="../css/minesweeper.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="game-header">
+      <div class="logo">ATF SOLUÇÕES</div>
+      <div class="game-title">
+        <i class="fas fa-bomb"></i>
+        CAMPO MINADO RETRÔ
+        <i class="fas fa-bomb"></i>
+      </div>
+      
+      <div class="game-info">
+        <div class="info-item">
+          <div class="info-label">Minas</div>
+          <div class="info-value" id="mineCount">10</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Tempo</div>
+          <div class="info-value" id="timer">000</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Status</div>
+          <div class="info-value" id="gameStatus">😊</div>
+        </div>
+      </div>
+
+      <div class="difficulty-buttons">
+        <button class="difficulty-btn active" data-level="easy">Fácil (9x9)</button>
+        <button class="difficulty-btn" data-level="medium">Médio (16x16)</button>
+        <button class="difficulty-btn" data-level="hard">Difícil (16x30)</button>
+      </div>
+    </div>
+
+    <div class="game-message" id="gameMessage"></div>
+
+    <div class="game-board">
+      <div class="board" id="gameBoard"></div>
+    </div>
+
+    <div class="controls">
+      <button class="control-btn" onclick="newGame()">
+        <i class="fas fa-redo"></i> Novo Jogo
+      </button>
+      <button class="control-btn back-btn" onclick="window.close()">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+
+    <div class="instructions">
+      <strong>Como jogar:</strong><br>
+      • Clique esquerdo para revelar uma célula<br>
+      • Clique direito para marcar/desmarcar uma mina<br>
+      • Números indicam quantas minas estão ao redor<br>
+      • Encontre todas as células sem minas para vencer!
+    </div>
+  </div>
+
+  <script src="../js/minesweeper.js"></script>
+</body>
+</html>

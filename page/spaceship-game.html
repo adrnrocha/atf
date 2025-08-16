@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nave Espacial - ATF SOLUÇÕES</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="../css/spaceship.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="game-header">
+      <div class="logo">ATF SOLUÇÕES</div>
+      <div class="game-title">
+        <i class="fas fa-rocket"></i>
+        NAVE ESPACIAL RETRÔ
+        <i class="fas fa-rocket"></i>
+      </div>
+      
+      <div class="game-info">
+        <div class="info-item">
+          <div class="info-label">Pontuação</div>
+          <div class="info-value" id="score">0</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Vidas</div>
+          <div class="info-value" id="lives">3</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Nível</div>
+          <div class="info-value" id="level">1</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Status</div>
+          <div class="info-value" id="gameStatus">🚀</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-message" id="gameMessage"></div>
+
+    <div class="game-board">
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+      <div class="game-paused" id="pauseScreen">
+        <div class="pause-content">
+          <h2>JOGO PAUSADO</h2>
+          <p>Pressione ESPAÇO para continuar</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="control-btn" onclick="startGame()">
+        <i class="fas fa-play"></i> <span id="playBtnText">Iniciar</span>
+      </button>
+      <button class="control-btn" onclick="pauseGame()">
+        <i class="fas fa-pause"></i> Pausar
+      </button>
+      <button class="control-btn back-btn" onclick="window.close()">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+
+    <div class="instructions">
+      <strong>Como jogar:</strong><br>
+      • Use as setas ← → ou A/D para mover a nave<br>
+      • Pressione ESPAÇO para atirar<br>
+      • Desvie e destrua os meteoros<br>
+      • A cada 100 pontos o nível aumenta!<br>
+      • Pressione P para pausar o jogo
+    </div>
+  </div>
+
+  <script src="../js/spaceship.js"></script>
+</body>
+</html>
